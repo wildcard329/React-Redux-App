@@ -1,13 +1,15 @@
 import React from "react";
 import { connect } from "react-redux";
+import '../App.css'
 
 const CharacterList = props => {
     console.log(props.characters,"list-props")
 
     return (
-        <div>
+        <div className="display">
             {props.characters.map(character => (
-                                                <div key={character.created}>
+                                                <div className="characters"
+                                                key={character.created}>
                                                 <h1>{character.name}</h1>
                                                 <p>Created: {character.created}</p>
                                                 <p>Edited: {character.edited}</p>
