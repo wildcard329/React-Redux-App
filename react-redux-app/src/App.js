@@ -9,6 +9,7 @@ import {starwarsReducer as reducer} from './reducers/starwarsReducer';
 
 
 import StarwarsForm from './components/StarwarsForm';
+import CharactersList from './components/CharactersList';
 
 const store = createStore(reducer, applyMiddleware(thunk));
 
@@ -18,6 +19,7 @@ function App() {
       <div className="App">
         <h1>Star Wars Characters</h1>
         <StarwarsForm />
+        <CharactersList />
       </div>
     </Provider>
   );

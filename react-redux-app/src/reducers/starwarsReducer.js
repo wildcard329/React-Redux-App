@@ -1,4 +1,4 @@
-import {GET_DATA, UPDATE_CHARACTERS} from '../actions'
+import {GET_DATA, UPDATE_CHARACTERSLIST} from '../actions'
 
 const initialState = {
     characters: [],
@@ -12,10 +12,12 @@ export const starwarsReducer = (state = initialState, action) => {
                 ...state,
                 isFetchingData: true
             };
-        case UPDATE_CHARACTERS:
+        case UPDATE_CHARACTERSLIST:
+            console.log(state, 'state')
             return {
                 ...state,
-                characers: action.payload
+                characters: action.payload,
+                isFetchingData: false
             }
         default:
             return state;
